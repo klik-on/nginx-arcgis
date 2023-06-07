@@ -1,0 +1,12 @@
+$ wget certificate.zip
+$ unzip certificate.zip
+$ openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out fullchain.pfx
+Enter Export Password: 123456
+Verifying - Enter Export Password: 123456
+
+$ docker cp fullchain.pfx WEBADAPTOR:/home
+# cd /usr/local/tomcat/conf/
+# vi server.xml
+  <Service name="Catalina">
+    <Connector port="443" maxThreads="200" scheme="https" secure="true" SSLEnabled="true" keystorePass="123456" clientAuth="false" ssl
+Protocol="TLS" keystoreFile="/home/fullchain.pfx" />
