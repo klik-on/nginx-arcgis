@@ -10,6 +10,7 @@ Silahkan login dengan kredensial default :
 Email address: admin@example.com 
 Password: changeme
 
+### convert Let's Encrypt certificate to pfx (tomcat)
 $ wget https://raw.githubusercontent.com/klik-on/nginx-arcgis/main/certificate.zip
 $ unzip certificate.zip
 $ openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out fullchain.pfx
