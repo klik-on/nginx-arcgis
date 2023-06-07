@@ -32,7 +32,8 @@ $ docker cp wildcard.pfx WEBADAPTOR:/home
 # cd /usr/local/tomcat/conf/
 # vi server.xml
   <Service name="Catalina">
-   <Connector port="443" maxThreads="200" 
+   <Connector protocol="org.apache.coyote.http11.Http11NioProtocol"
+    port="443" maxThreads="200" 
     scheme="https" secure="true" SSLEnabled="true" 
-    keystorePass="123456" clientAuth="false" sslProtocol="TLS" 
-    keystoreFile="/home/wildcard.pfx" />
+    keystoreFile="/home/wildcard.pfx" keystorePass="123456"
+    clientAuth="false" sslProtocol="TLS" />
