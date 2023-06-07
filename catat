@@ -28,9 +28,11 @@ Verifying - Enter Export Password: 123456
 $ openssl pkcs12 -export -out /tmp/wildcard.pfx -inkey privkey.pem -in cert.pem -certfile chain.pem
 $ docker cp /tmp/wildcard.pfx WEBADAPTOR:/home
 
-$ docker cp fullchain.pfx WEBADAPTOR:/home
+$ docker cp wildcard.pfx WEBADAPTOR:/home
 # cd /usr/local/tomcat/conf/
 # vi server.xml
   <Service name="Catalina">
-    <Connector port="443" maxThreads="200" scheme="https" secure="true" SSLEnabled="true" keystorePass="123456" clientAuth="false" ssl
-Protocol="TLS" keystoreFile="/home/fullchain.pfx" />
+   <Connector port="443" maxThreads="200" 
+    scheme="https" secure="true" SSLEnabled="true" 
+    keystorePass="123456" clientAuth="false" sslProtocol="TLS" 
+    keystoreFile="/home/wildcard.pfx" />
