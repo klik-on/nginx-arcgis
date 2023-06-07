@@ -9,6 +9,10 @@ http://IP_Address:81
 Silahkan login dengan kredensial default :
 Email address: admin@example.com 
 Password: changeme
+1. Add Proxy Host
+2. Pada bagian SSL Certificate pilih Request a new SSL Certificate.
+   Aktifkan pilihan Force SSL dan HTTP/2 Support.
+   Isi email dengan email Anda dan centang Term of Service.
 
 ### convert Let's Encrypt certificate to pfx (tomcat)
 $ wget https://raw.githubusercontent.com/klik-on/nginx-arcgis/main/certificate.zip
