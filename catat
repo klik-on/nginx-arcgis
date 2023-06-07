@@ -23,6 +23,10 @@ $ unzip certificate.zip
 $ openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out fullchain.pfx
 Enter Export Password: 123456
 Verifying - Enter Export Password: 123456
+### atau ****
+# Export PFX into /tmp/wildcard.pfx
+$ openssl pkcs12 -export -out /tmp/wildcard.pfx -inkey privkey.pem -in cert.pem -certfile chain.pem
+$ docker cp /tmp/wildcard.pfx WEBADAPTOR:/home
 
 $ docker cp fullchain.pfx WEBADAPTOR:/home
 # cd /usr/local/tomcat/conf/
