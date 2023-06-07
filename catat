@@ -1,3 +1,5 @@
+// https://www.nusa.id/knowledge-base/membangun-server-proxy-dengan-nginx-proxy-manager/
+
 $ wget https://raw.githubusercontent.com/klik-on/nginx-arcgis/main/certificate.zip
 $ unzip certificate.zip
 $ openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out fullchain.pfx
