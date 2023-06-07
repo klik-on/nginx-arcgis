@@ -10,6 +10,9 @@ Silahkan login dengan kredensial default :
 Email address: admin@example.com 
 Password: changeme
 1. Add Proxy Host
+Domain Names silahkan tambahkan domain yang sesuai dengan FQDN kemudian enter.
+Isi bagian Forward Hostname dengan IP Address server nginx proxy manager.
+Tambahkan Forward Port dengan nilai 81, dan enable Block Common Exploits.
 2. Pada bagian SSL Certificate pilih Request a new SSL Certificate.
    Aktifkan pilihan Force SSL dan HTTP/2 Support.
    Isi email dengan email Anda dan centang Term of Service.
