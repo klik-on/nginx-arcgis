@@ -2,15 +2,16 @@
 buat SSL => Let's Encrypt   ::: port 80, 443 dan 81 jangan aktif/sedang digunakan
 $ mkdir nginx-proxy && cd nginx-proxy
 $ vi docker-compose.yml
-$ mkdir {data,letsencrypt}
+$ mkdir {data,letsencrypt}  ==> utk update hapus folder $sudo rm -rf {data,letsencrypt,mysql}
 $ docker network create npm-nw
 $ docker-compose up -d
 http://IP_Address:81
 Silahkan login dengan kredensial default :
 Email address: admin@example.com 
 Password: changeme
+* Ganti Email address: admin@example.com 
 1. Add Proxy Host
-Domain Names silahkan tambahkan domain yang sesuai dengan FQDN kemudian enter.
+Domain Names silahkan tambahkan domain yang sesuai dengan FQDN kemudian TEKAN enter.
 Isi bagian Forward Hostname dengan IP Address server nginx proxy manager.
 Tambahkan Forward Port dengan nilai 81, dan enable Block Common Exploits.
 2. Pada bagian SSL Certificate pilih Request a new SSL Certificate.
