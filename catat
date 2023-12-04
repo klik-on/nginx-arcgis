@@ -3,7 +3,7 @@ buat SSL => Let's Encrypt   ::: port 80, 443 dan 81 jangan aktif/sedang digunaka
 $ mkdir nginx-proxy && cd nginx-proxy
 $ vi docker-compose.yml
 $ mkdir {data,letsencrypt}  ==> utk update hapus folder $sudo rm -rf {data,letsencrypt,mysql}
-$ docker network create npm-nw
+$ docker network create npm-nw  ##optional
 $ docker-compose up -d
 http://IP_Address:81
 Silahkan login dengan kredensial default :
